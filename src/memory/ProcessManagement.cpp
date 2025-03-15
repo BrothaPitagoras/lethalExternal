@@ -133,9 +133,9 @@ uintptr_t ProcessManagement::FindPattern(const std::string& pattern) {
 		SIZE_T bytesRead = 0;
 		DWORD oldProtect;
 
-		VirtualProtectEx(m_hProcess, reinterpret_cast<void*>(current), sizeof(buffer), PROCESS_VM_READ, &oldProtect);
+		//VirtualProtectEx(m_hProcess, reinterpret_cast<void*>(current), sizeof(buffer), PROCESS_VM_READ, &oldProtect);
 		ReadProcessMemory(m_hProcess, reinterpret_cast<void*>(current), &buffer, sizeof(buffer), &bytesRead);
-		VirtualProtectEx(m_hProcess, reinterpret_cast<void*>(current), sizeof(buffer), oldProtect, nullptr);
+		//VirtualProtectEx(m_hProcess, reinterpret_cast<void*>(current), sizeof(buffer), oldProtect, nullptr);
 
 		if (bytesRead == 0)
 		{
@@ -157,9 +157,9 @@ uintptr_t ProcessManagement::FindPattern(const std::string& pattern) {
 
 
 
-ProcessManagement::ProcessManagement(const std::string& procName) {
+ProcessManagement::ProcessManagement(const std::string& procName, const std::string& moduleName) {
 	DWORD pid = GetProcessId(procName);
-	this->moduleBaseAddr = GetModuleBaseAddress(pid, procName);
-	this->procModule = GetModule(pid, procName);
-	this->m_hProcess = OpenProcess(PROCESS_ALL_ACCESS, false, pid);
+	this->moduleBaseAddr = GetModuleBaseAddress(pid, moduleName);
+	this->procModule = GetModule(pid, moduleName);
+	this->m_hProcess = OpenProcess(PROCESS_VM_OPERATION | PROCESS_VM_READ | PROCESS_VM_WRITE, false, pid);
 }

@@ -6,7 +6,7 @@ class ProcessManagement
 {
 public:
 
-	explicit ProcessManagement(const std::string& procName);
+	explicit ProcessManagement(const std::string& procName, const std::string& moduleName);
 
 	HANDLE m_hProcess;
 

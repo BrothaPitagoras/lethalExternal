@@ -113,7 +113,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Games\lethalCheat\LethalExternal\LethalExternal\inc;C:\Games\lethalCheat\LethalExternal\LethalExternal\external_includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Games\lethalExternal\lethalExternal\inc;C:\Games\lethalExternal\lethalExternal\external_includes;C:\Games\lethalCheat\LethalExternal\LethalExternal\inc;C:\Games\lethalCheat\LethalExternal\LethalExternal\external_includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -130,7 +130,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Games\lethalCheat\LethalExternal\LethalExternal\inc;C:\Games\lethalCheat\LethalExternal\LethalExternal\external_includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Games\lethalExternal\lethalExternal\inc;C:\Games\lethalExternal\lethalExternal\external_includes;C:\Games\lethalCheat\LethalExternal\LethalExternal\inc;C:\Games\lethalCheat\LethalExternal\LethalExternal\external_includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -162,6 +162,7 @@
     <ClInclude Include="external_includes\imgui\imstb_rectpack.h" />
     <ClInclude Include="external_includes\imgui\imstb_textedit.h" />
     <ClInclude Include="external_includes\imgui\imstb_truetype.h" />
+    <ClInclude Include="inc\data\GameClasses.hpp" />
     <ClInclude Include="inc\data\globals.hpp" />
     <ClInclude Include="inc\data\menu_options.hpp" />
     <ClInclude Include="inc\gui\MainMenu.hpp" />
